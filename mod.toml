@@ -1,0 +1,24 @@
+[manifest]
+id = "no_slope_limit"
+version = "1.0.0"
+display_name = "No Slope Limit"
+description = "Removes the limit of how slope-y a slope can be in order to climb"
+short_description = "Removes the limit of how slope-y a slope can be in order to climb"
+authors = [ "Ballaam" ]
+game_id = "dk64"
+minimum_recomp_version = "1.0.0"
+
+[[manifest.config_options]]
+id = "applies_to_all"
+name = "Limit Removal Context"
+description = "Controls where the limit change happens"
+type = "Enum"
+options = [ "Orangstand Only", "All" ]
+default = "All"
+
+[inputs]
+elf_path = "build/mod.elf"
+mod_filename = "no_slope_limit"
+func_reference_syms_file = "Dk64Syms/dump.toml"
+data_reference_syms_files = [ "Dk64Syms/data_dump.toml" ]
+additional_files = ["thumb.dds"]
